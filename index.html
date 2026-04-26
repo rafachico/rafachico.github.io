@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rafael Geraldini Francisco — Data &amp; ML Engineer</title>
+  <meta name="description"
+    content="Rafael Geraldini Francisco — Data &amp; ML Engineer especializado em pipelines críticos, governança de IA e sistemas de visão computacional. UNICAMP.">
+  <meta name="theme-color" content="#080808">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+
+<body>
+
+  <!-- ─── SCROLL PROGRESS ─── -->
+  <div id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ─── NAV ─── -->
+  <nav id="nav" role="navigation" aria-label="Navegação principal">
+    <a href="#hero" class="nav-logo">rg.dev</a>
+
+    <ul class="nav-links">
+      <li><a href="#architecture">Arquitetura</a></li>
+      <li><a href="#projects">Projetos</a></li>
+      <li><a href="#stack">Stack</a></li>
+      <li><a href="#experience">Experiência</a></li>
+      <li><a href="#academic">Acadêmico</a></li>
+      <li><a href="#contact">Contato</a></li>
+    </ul>
+
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile drawer -->
+  <nav id="nav-drawer" class="nav-drawer" aria-label="Menu mobile">
+    <a href="#architecture">Arquitetura</a>
+    <a href="#projects">Projetos</a>
+    <a href="#stack">Stack</a>
+    <a href="#experience">Experiência</a>
+    <a href="#academic">Acadêmico</a>
+    <a href="#contact">Contato</a>
+  </nav>
+
+  <!-- ─── HERO ─── -->
+  <section id="hero" aria-label="Introdução">
+    <div class="container hero-inner">
+      <div class="hero-grid">
+
+        <!-- Left: Text -->
+        <div>
+          <p class="hero-eyebrow">Data &amp; ML Engineer</p>
+          <h1 class="hero-name">Rafael Geraldini<br><span>Francisco</span></h1>
+          <p class="hero-role">
+            Do hardware ao software de alta escala —<br>
+            <strong>pipelines críticos</strong>, <strong>sistemas de IA</strong> e
+            <strong>governança corporativa</strong>.
+          </p>
+          <ul class="hero-tags" aria-label="Principais tecnologias">
+            <li class="tag">Kubernetes</li>
+            <li class="tag">LLM Fine-tuning</li>
+            <li class="tag">CI/CD</li>
+            <li class="tag">Computer Vision</li>
+            <li class="tag">MLOps</li>
+            <li class="tag">QLoRA</li>
+            <li class="tag">GCP · AWS</li>
+            <li class="tag">FastAPI</li>
+            <li class="tag">MongoDB</li>
+          </ul>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">Ver Projetos</a>
+            <a href="mailto:rafael.gfrancisco@outlook.com" class="btn btn-ghost">Contato</a>
+            <a href="https://github.com/rafachico" target="_blank" rel="noopener noreferrer"
+              class="btn btn-ghost">GitHub</a>
+          </div>
+        </div>
+
+        <!-- Right: Terminal -->
+        <div>
+          <div class="terminal" aria-label="Terminal de capacidades">
+            <div class="terminal-bar" aria-hidden="true">
+              <span class="t-dot t-dot-r"></span>
+              <span class="t-dot t-dot-y"></span>
+              <span class="t-dot t-dot-g"></span>
+              <span class="terminal-bar-title">rafael@dev — boot</span>
+            </div>
+            <div class="terminal-body" id="terminal-body"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="glow-line" aria-hidden="true"></div>
+
+  <!-- ─── ARCHITECTURE ─── -->
+  <section id="architecture" aria-labelledby="arch-title">
+    <div class="container">
+      <header class="section-header fade-up">
+        <span class="section-label">// core architecture</span>
+        <h2 class="section-title" id="arch-title">Do Silício ao <span>Bit</span></h2>
+        <p class="section-desc">
+          Uma perspectiva única construída camada por camada — circuitos digitais na graduação,
+          pipelines de dados em cloud, modelos de ML em produção e governança de IA corporativa.
+        </p>
+      </header>
+
+      <div class="arch-diagram fade-up" aria-label="Diagrama de arquitetura: Telecom → ML/AI → Data Eng → Governance">
+        <div class="arch-flow">
+
+          <div class="arch-node arch-node--telecom">
+            <span class="arch-node-label">Telecom</span>
+            <strong class="arch-node-title">UNICAMP</strong>
+            <span class="arch-node-sub">vHDL · RF · VLC<br>Circuitos Digitais</span>
+          </div>
+
+          <div class="arch-connector" aria-hidden="true">&#8594;</div>
+
+          <div class="arch-node arch-node--ml">
+            <span class="arch-node-label">ML / AI</span>
+            <strong class="arch-node-title">Modelos &amp; LLMs</strong>
+            <span class="arch-node-sub">QLoRA · Vision · SVM<br>Agentes &amp; Orquestração</span>
+          </div>
+
+          <div class="arch-connector" aria-hidden="true">&#8594;</div>
+
+          <div class="arch-node arch-node--data">
+            <span class="arch-node-label">Data Eng</span>
+            <strong class="arch-node-title">Pipelines &amp; MLOps</strong>
+            <span class="arch-node-sub">K8s · Synapse · GCP<br>AWS · MLFlow · CI/CD</span>
+          </div>
+
+          <div class="arch-connector" aria-hidden="true">&#8594;</div>
+
+          <div class="arch-node arch-node--govern">
+            <span class="arch-node-label">Governance</span>
+            <strong class="arch-node-title">Safety &amp; Compliance</strong>
+            <span class="arch-node-sub">PII · LGPD · SUSEP<br>Bacen · ANS · PLD</span>
+          </div>
+
+        </div>
+        <p class="arch-footer">Engenharia de Dados &amp; IA · Limeira, SP</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PROJECTS ─── -->
+  <section id="projects" aria-labelledby="proj-title">
+    <div class="container">
+      <header class="section-header fade-up">
+        <span class="section-label">// project vault</span>
+        <h2 class="section-title" id="proj-title">Projetos em <span>Produção</span></h2>
+        <p class="section-desc">Clique em qualquer card para expandir o tech breakdown completo.</p>
+      </header>
+
+      <!-- Filter -->
+      <div class="filter-bar fade-up" aria-label="Filtrar projetos por categoria">
+        <button class="filter-btn active" data-filter="todos">Todos</button>
+        <button class="filter-btn" data-filter="llm">LLM</button>
+        <button class="filter-btn" data-filter="visao">Visão Computacional</button>
+        <button class="filter-btn" data-filter="mlops">MLOps</button>
+        <button class="filter-btn" data-filter="infra">Infra</button>
+        <button class="filter-btn" data-filter="governanca">Governança</button>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Lloro Chat -->
+        <div class="project-card fade-up" data-category="llm">
+          <button class="project-head" type="button" aria-expanded="false">
+            <div class="project-meta">
+              <span class="badge badge-llm">LLM</span>
+              <span class="card-toggle" aria-hidden="true">&#9660;</span>
+            </div>
+            <h3 class="project-name">Lloro Chat</h3>
+            <p class="project-sub">Assistente de IA para que a população de uma cidade consulte legislação municipal de
+              forma natural — zoneamento, licenciamento e regulamentações locais.</p>
+          </button>
+          <div class="project-body" aria-hidden="true">
+            <div class="project-body-inner">
+              <div>
+                <p class="bd-label">Problema</p>
+                <p class="bd-text">Acesso à legislação de zoneamento e licenciamento empresarial era fragmentado, exigia
+                  conhecimento técnico-jurídico e consumia horas de pesquisa em portais públicos.</p>
+              </div>
+              <div>
+                <p class="bd-label">Solução</p>
+                <p class="bd-text">Fine-tuning supervisionado de um modelo <strong>Llama</strong> com <strong>QLoRA +
+                    Unsloth</strong> sobre o corpus jurídico municipal completo, exposto via interface de linguagem
+                  natural. O modelo responde em segundos consultas que antes levavam horas.</p>
+              </div>
+              <div>
+                <p class="bd-label">Stack Técnica</p>
+                <div class="chip-row">
+                  <span class="chip">Llama</span><span class="chip">QLoRA</span><span class="chip">Unsloth</span>
+                  <span class="chip">HuggingFace</span><span class="chip">Python</span><span class="chip">FastAPI</span>
+                </div>
+              </div>
+              <div>
+                <p class="bd-label">Impacto</p>
+                <p class="bd-text">Democratização do acesso à informação técnica municipal — de horas para segundos.
+                  Interface de linguagem natural elimina a barreira de conhecimento jurídico.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI Orchestration Suite -->
+        <div class="project-card fade-up" data-category="llm governanca">
+          <button class="project-head" type="button" aria-expanded="false">
+            <div class="project-meta">
+              <span class="badge badge-orch">Orquestração</span>
+              <span class="card-toggle" aria-hidden="true">&#9660;</span>
+            </div>
+            <h3 class="project-name">AI Orchestration Suite</h3>
+            <p class="project-sub">Plataforma modular de IA corporativa com orquestração de agentes, guardrails de
+              segurança e controle de fluxo de dados entre serviços.</p>
+          </button>
+          <div class="project-body" aria-hidden="true">
+            <div class="project-body-inner">
+              <div>
+                <p class="bd-label">Módulos</p>
+                <p class="bd-text">
+                  <strong>Orquestração</strong> — gerencia o ciclo de vida e comunicação entre agentes de IA ·
+                  <strong>Segurança</strong> — guardrails com detecção e mascaramento de PII em tempo real ·
+                  <strong>Fluxo de Dados</strong> — controle e rastreabilidade do pipeline entre serviços de IA.
+                </p>
+              </div>
+              <div>
+                <p class="bd-label">Diferencial</p>
+                <p class="bd-text">Auditoria completa de todas as decisões tomadas por agentes, com conformidade a
+                  regulamentações financeiras (PLD, Bacen, ANS) e trilhas de log imutáveis.</p>
+              </div>
+              <div>
+                <p class="bd-label">Stack Técnica</p>
+                <div class="chip-row">
+                  <span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">n8n</span>
+                  <span class="chip">LLM Guardrails</span><span class="chip">PII Detection</span><span
+                    class="chip">Audit Logs</span>
+                  <span class="chip">JavaScript</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI Governance Insurance -->
+        <div class="project-card fade-up" data-category="governanca">
+          <button class="project-head" type="button" aria-expanded="false">
+            <div class="project-meta">
+              <span class="badge badge-govern">Governança</span>
+              <span class="card-toggle" aria-hidden="true">&#9660;</span>
+            </div>
+            <h3 class="project-name">Governança de IA — Seguros</h3>
+            <p class="project-sub">Framework de políticas, gestão de acesso e auditoria para institucionalização segura
+              de IA em uma seguradora.</p>
+          </button>
+          <div class="project-body" aria-hidden="true">
+            <div class="project-body-inner">
+              <div>
+                <p class="bd-label">Contexto</p>
+                <p class="bd-text">Uma seguradora precisava adotar IA em processos críticos de
+                  <strong>underwriting</strong>, <strong>precificação</strong> e <strong>análise de sinistros</strong>
+                  de forma responsável, rastreável e em conformidade com LGPD e circulares da SUSEP.</p>
+              </div>
+              <div>
+                <p class="bd-label">Entregáveis</p>
+                <p class="bd-text">
+                  · Mapeamento de riscos e criação de <strong>Model Cards</strong> para todos os algoritmos em
+                  produção<br>
+                  · <strong>RBAC granular</strong> com políticas de acesso segmentadas por time e nível de risco<br>
+                  · Pipeline de monitoramento de <strong>concept drift</strong> com alertas automáticos<br>
+                  · Processo de validação de <strong>viés algorítmico</strong> pré-deploy<br>
+                  · Trilhas de auditoria para decisões automatizadas de alto impacto
+                </p>
+              </div>
+              <div>
+                <p class="bd-label">Stack Técnica</p>
+                <div class="chip-row">
+                  <span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">MLFlow</span>
+                  <span class="chip">RBAC</span><span class="chip">Bias Detection</span><span class="chip">Model
+                    Cards</span>
+                  <span class="chip">LGPD</span><span class="chip">SUSEP</span><span class="chip">PostgreSQL</span>
+                </div>
+              </div>
+              <div>
+                <p class="bd-label">Impacto</p>
+                <p class="bd-text">Redução de risco regulatório, visibilidade completa sobre o ciclo de vida dos modelos
+                  e processos formais de revisão humana para decisões de alto impacto ao segurado.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Face Recognition -->
+        <div class="project-card fade-up" data-category="visao">
+          <button class="project-head" type="button" aria-expanded="false">
+            <div class="project-meta">
+              <span class="badge badge-vision">Visão</span>
+              <span class="card-toggle" aria-hidden="true">&#9660;</span>
+            </div>
+            <h3 class="project-name">Face Recognition</h3>
+            <p class="project-sub">Controle de acesso biométrico em tempo real com deploy em NVIDIA Jetson — pipeline
+              completo de detecção, embedding e matching.</p>
+          </button>
+          <div class="project-body" aria-hidden="true">
+            <div class="project-body-inner">
+              <div>
+                <p class="bd-label">Arquitetura (3 etapas)</p>
+                <p class="bd-text">
+                  1. Detecção facial com <strong>MTCNN</strong> ·
+                  2. Geração de embeddings com <strong>Inception ResNet / ResNet50</strong> ·
+                  3. Matching por <strong>Cosine Similarity</strong> contra galeria de identidades.
+                </p>
+              </div>
+              <div>
+                <p class="bd-label">Performance</p>
+                <p class="bd-text">VGGFace2: <strong>97.77% Precision · 97.22% Recall</strong>. Deploy otimizado para
+                  CUDA no NVIDIA Jetson com gestão de dependências cross-arch (Python 3.6 · Torch 1.10).</p>
+              </div>
+              <div>
+                <p class="bd-label">Datasets</p>
+                <p class="bd-text">VGGFace2 (3,3M+ faces · 9.131 identidades) · CASIA WebFace (494k imagens · 10.575
+                  identidades)</p>
+              </div>
+              <div>
+                <p class="bd-label">Stack Técnica</p>
+                <div class="chip-row">
+                  <span class="chip">MTCNN</span><span class="chip">Inception ResNet</span><span
+                    class="chip">ResNet50</span>
+                  <span class="chip">PyTorch</span><span class="chip">CUDA</span><span class="chip">NVIDIA Jetson</span>
+                  <span class="chip">FastAPI</span><span class="chip">OpenCV</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image Fraud -->
+        <div class="project-card fade-up" data-category="visao">
+          <button class="project-head" type="button" aria-expanded="false">
+            <div class="project-meta">
+              <span class="badge badge-vision">Visão</span>
+              <span class="card-toggle" aria-hidden="true">&#9660;</span>
+            </div>
+            <h3 class="project-name">Image Fraud Detection</h3>
+            <p class="project-sub">Detecção de documentos forjados — notas fiscais e recibos — via similaridade de
+              embeddings visuais e KNN.</p>
+          </button>
+          <div class="project-body" aria-hidden="true">
+            <div class="project-body-inner">
+              <div>
+                <p class="bd-label">Abordagem</p>
+                <p class="bd-text">Extração de features com <strong>ResNet50</strong>, normalização por
+                  <strong>histogram matching</strong> (scikit-image) e busca <strong>KNN</strong> no espaço de
+                  embeddings com StandardScaler. Múltiplas métricas: FSIM, SSIM, RMSE, UIQ.</p>
+              </div>
+              <div>
+                <p class="bd-label">API</p>
+                <p class="bd-text">
+                  <span class="bd-code">POST /api/img_fraud_detect</span>&nbsp;
+                  <span class="bd-code">POST /api/images_upload</span>
+                </p>
+              </div>
+              <div>
+                <p class="bd-label">Stack Técnica</p>
+                <div class="chip-row">
+                  <span class="chip">ResNet50</span><span class="chip">KNN</span><span class="chip">scikit-image</span>
+                  <span class="chip">FastAPI</span><span class="chip">Gradio</span><span class="chip">OpenCV</span>
+                  <span class="chip">NumPy</span><span class="chip">scikit-learn</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MLFlow Infrastructure -->
+        <div class="project-card fade-up" data-category="mlops">
+          <button class="project-head" type="button" aria-expanded="false">
+            <div class="project-meta">
+              <span class="badge badge-mlops">MLOps</span>
+              <span class="card-toggle" aria-hidden="true">&#9660;</span>
+            </div>
+            <h3 class="project-name">MLFlow Infrastructure</h3>
+            <p class="project-sub">Servidor corporativo de rastreamento de experimentos com OAuth2 Google, Redis e
+              artifact storage no GCP.</p>
+          </button>
+          <div class="project-body" aria-hidden="true">
+            <div class="project-body-inner">
+              <div>
+                <p class="bd-label">Arquitetura (4 containers)</p>
+                <p class="bd-text">
+                  <strong>Redis</strong> (session store) →
+                  <strong>OAuth2 Proxy</strong> (Google Auth + JWT) →
+                  <strong>Nginx</strong> (reverse proxy) →
+                  <strong>MLFlow 1.28</strong> (SQLite + GCS artifacts).
+                </p>
+              </div>
+              <div>
+                <p class="bd-label">Segurança</p>
+                <p class="bd-text">Controle de acesso por domínio via Google Cloud. Cookie refresh de 2h. Header
+                  forwarding: <span class="bd-code">X-User</span> <span class="bd-code">X-Email</span> <span
+                    class="bd-code">X-Access-Token</span>.</p>
+              </div>
+              <div>
+                <p class="bd-label">Frameworks suportados</p>
+                <div class="chip-row">
+                  <span class="chip">SKLearn</span><span class="chip">TensorFlow</span><span class="chip">PyTorch</span>
+                  <span class="chip">XGBoost</span><span class="chip">YOLOv5</span>
+                </div>
+              </div>
+              <div>
+                <p class="bd-label">Stack Técnica</p>
+                <div class="chip-row">
+                  <span class="chip">Docker Compose</span><span class="chip">Nginx</span><span class="chip">OAuth2
+                    Proxy</span>
+                  <span class="chip">Redis</span><span class="chip">GCS</span><span class="chip">GCP</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CI/CD Pipeline -->
+        <div class="project-card fade-up" data-category="infra">
+          <button class="project-head" type="button" aria-expanded="false">
+            <div class="project-meta">
+              <span class="badge badge-infra">Infra</span>
+              <span class="card-toggle" aria-hidden="true">&#9660;</span>
+            </div>
+            <h3 class="project-name">CI/CD Enterprise Pipeline</h3>
+            <p class="project-sub">Pipeline GitLab CI de 6 estágios com SAST, testes automatizados e deploy contínuo em
+              GCP Cloud Run.</p>
+          </button>
+          <div class="project-body" aria-hidden="true">
+            <div class="project-body-inner">
+              <div>
+                <p class="bd-label">Estágios</p>
+                <p class="bd-text">
+                  1. <strong>SAST</strong> — security scanning ·
+                  2. <strong>Unit Test</strong> — Pytest Python 3.9 ·
+                  3. <strong>Validate</strong> — Dockerfile lint ·
+                  4. <strong>Build</strong> — Docker → GCR ·
+                  5. <strong>Deploy</strong> — Cloud Run ·
+                  6. <strong>Healthcheck</strong> — <span class="bd-code">POST /health</span>
+                </p>
+              </div>
+              <div>
+                <p class="bd-label">Diferencial</p>
+                <p class="bd-text">Docker-in-Docker (DinD) para build isolado, autenticação via service account GCP e
+                  verificação automatizada de saúde de frontend e backend após cada deploy.</p>
+              </div>
+              <div>
+                <p class="bd-label">Stack Técnica</p>
+                <div class="chip-row">
+                  <span class="chip">GitLab CI</span><span class="chip">DinD</span><span class="chip">Pytest</span>
+                  <span class="chip">Cloud Run</span><span class="chip">GCR</span><span class="chip">gcloud
+                    CLI</span><span class="chip">SAST</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── STACK ─── -->
+  <section id="stack" aria-labelledby="stack-title">
+    <div class="container">
+      <header class="section-header fade-up">
+        <span class="section-label">// tech stack</span>
+        <h2 class="section-title" id="stack-title">Domínio <span>Técnico</span></h2>
+      </header>
+      <div class="stack-grid">
+
+        <div class="stack-group fade-up">
+          <p class="stack-group-label">ML / IA</p>
+          <div class="stack-items">
+            <div class="stack-item"><span class="stack-dot"></span>PyTorch · TensorFlow</div>
+            <div class="stack-item"><span class="stack-dot"></span>LLM Fine-tuning (QLoRA)</div>
+            <div class="stack-item"><span class="stack-dot"></span>Unsloth · HuggingFace</div>
+            <div class="stack-item"><span class="stack-dot"></span>scikit-learn · XGBoost</div>
+            <div class="stack-item"><span class="stack-dot"></span>MTCNN · ResNet · YOLO</div>
+          </div>
+        </div>
+
+        <div class="stack-group fade-up">
+          <p class="stack-group-label">Dados &amp; MLOps</p>
+          <div class="stack-items">
+            <div class="stack-item"><span class="stack-dot"></span>Azure Synapse Analytics</div>
+            <div class="stack-item"><span class="stack-dot"></span>MLFlow · Apache Spark</div>
+            <div class="stack-item"><span class="stack-dot"></span>Fluentd · Monitoring</div>
+            <div class="stack-item"><span class="stack-dot"></span>Python · Java · SQL</div>
+            <div class="stack-item"><span class="stack-dot"></span>n8n · JavaScript</div>
+          </div>
+        </div>
+
+        <div class="stack-group fade-up">
+          <p class="stack-group-label">Cloud &amp; Infra</p>
+          <div class="stack-items">
+            <div class="stack-item"><span class="stack-dot"></span>Kubernetes (K8s)</div>
+            <div class="stack-item"><span class="stack-dot"></span>GCP — Cloud Run · GCR · GCS</div>
+            <div class="stack-item"><span class="stack-dot"></span>AWS — EC2 · S3 · Lambda</div>
+            <div class="stack-item"><span class="stack-dot"></span>Docker · Docker Compose</div>
+            <div class="stack-item"><span class="stack-dot"></span>GitLab CI/CD · Nginx</div>
+          </div>
+        </div>
+
+        <div class="stack-group fade-up">
+          <p class="stack-group-label">APIs &amp; Bancos</p>
+          <div class="stack-items">
+            <div class="stack-item"><span class="stack-dot"></span>FastAPI · Gradio</div>
+            <div class="stack-item"><span class="stack-dot"></span>REST · JWT · OAuth2</div>
+            <div class="stack-item"><span class="stack-dot"></span>PostgreSQL · SQLite</div>
+            <div class="stack-item"><span class="stack-dot"></span>MongoDB · Redis</div>
+            <div class="stack-item"><span class="stack-dot"></span>Pytest · SAST · vHDL</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── EXPERIENCE ─── -->
+  <section id="experience" aria-labelledby="exp-title">
+    <div class="container">
+      <header class="section-header fade-up">
+        <span class="section-label">// experiência</span>
+        <h2 class="section-title" id="exp-title">Trajetória <span>Profissional</span></h2>
+      </header>
+
+      <div class="timeline fade-up">
+
+        <div class="timeline-item">
+          <p class="timeline-date">Jun 2025 — Presente &nbsp;·&nbsp; Limeira, SP</p>
+          <p class="timeline-role">Data Engineer</p>
+          <p class="timeline-company">Semantix Brasil</p>
+          <ul class="timeline-list">
+            <li>Sustentação e evolução de <strong>pipelines de dados no Azure Synapse Analytics</strong>, garantindo
+              SLA, qualidade e rastreabilidade dos dados em produção.</li>
+            <li>Desenvolvimento da <strong>AI Orchestration Suite</strong>: plataforma modular com orquestração de
+              agentes, guardrails de PII em tempo real e auditoria de decisões para conformidade com regulamentações
+              financeiras.</li>
+            <li>Implementação de <strong>framework de Governança de IA para o setor de seguros</strong>: Model Cards,
+              RBAC, detecção de viés algorítmico, monitoramento de drift e conformidade LGPD/SUSEP.</li>
+            <li>Gestão de <strong>clusters Kubernetes</strong> para alta disponibilidade e escalabilidade de modelos e
+              serviços de dados em produção.</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <p class="timeline-date">Ago 2023 — Jun 2025 &nbsp;·&nbsp; Limeira, SP</p>
+          <p class="timeline-role">Jr. Software Engineer</p>
+          <p class="timeline-company">Semantix Brasil</p>
+          <ul class="timeline-list">
+            <li>Desenvolvimento de <strong>Data Apps de ML</strong> em produção: detecção de fraude em imagens (ResNet50
+              + KNN), reconhecimento facial em tempo real (MTCNN + Jetson) e análise de sentimentos — todos integrados
+              via FastAPI.</li>
+            <li>Fine-tuning de <strong>LLM Llama com QLoRA/Unsloth</strong> para domínio de legislação municipal, com
+              interface de linguagem natural acessível ao público geral.</li>
+            <li>Construção de <strong>pipeline CI/CD de 6 estágios</strong> no GitLab com SAST, testes unitários
+              automatizados (Pytest) e deploy contínuo em GCP Cloud Run.</li>
+            <li>Implementação do <strong>MLFlow Server corporativo</strong> com autenticação OAuth2 via Google Cloud,
+              Redis e artifact storage no GCS.</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── ACADEMIC ─── -->
+  <section id="academic" aria-labelledby="ac-title">
+    <div class="container">
+      <header class="section-header fade-up">
+        <span class="section-label">// academic legacy</span>
+        <h2 class="section-title" id="ac-title">Base <span>Acadêmica</span></h2>
+        <p class="section-desc">
+          Fundação em engenharia de hardware e sistemas de comunicação — onde a compreensão
+          de baixo nível se traduz em arquiteturas de software mais resilientes.
+        </p>
+      </header>
+
+      <div class="academic-grid">
+
+        <div class="academic-card featured fade-up">
+          <div class="ac-icon icon-purple">&#127891;</div>
+          <h3 class="ac-title">TCC — Comunicação por Luz Visível para UAVs</h3>
+          <p class="ac-institution">UNICAMP &nbsp;·&nbsp; Eng. Telecomunicações &nbsp;·&nbsp; 2018–2023</p>
+          <p class="ac-desc">Pesquisa sobre a viabilidade de VLC (Visible Light Communication) como alternativa ao RF em
+            ambientes de transporte aéreo autônomo — explorando fronteiras de transmissão onde o espectro
+            eletromagnético é restrito ou crítico.</p>
+        </div>
+
+        <div class="academic-card fade-up">
+          <div class="ac-icon icon-cyan">&#9881;</div>
+          <h3 class="ac-title">Monitoria — Circuitos Digitais</h3>
+          <p class="ac-institution">UNICAMP &nbsp;·&nbsp; Depto. de Telecomunicações</p>
+          <p class="ac-desc">Suporte a alunos em projetos com vHDL, lógica combinatória e sequencial, síntese em FPGA e
+            análise de timing. Base que sustenta a visão de stack completo: do hardware ao software de alta escala.</p>
+        </div>
+
+        <div class="academic-card fade-up">
+          <div class="ac-icon icon-green">&#128268;</div>
+          <h3 class="ac-title">Pesquisa — Radar Doppler para Saúde</h3>
+          <p class="ac-institution">UNICAMP &nbsp;·&nbsp; Projeto de Iniciação Científica</p>
+          <p class="ac-desc">SVM com kernel RBF para classificação de movimentos em sinais de radar Doppler HB100.
+            Aplicação em monitoramento de mobilidade de idosos — detecção de quedas e padrões de movimento em tempo
+            real.</p>
+        </div>
+
+        <div class="academic-card fade-up">
+          <div class="ac-icon icon-amber">&#128187;</div>
+          <h3 class="ac-title">Eng. Telecomunicações</h3>
+          <p class="ac-institution">UNICAMP &nbsp;·&nbsp; Campinas, SP &nbsp;·&nbsp; 2018–2023</p>
+          <p class="ac-desc">Graduação cobrindo circuitos analógicos e digitais, processamento de sinais, sistemas RF,
+            protocolos de comunicação e programação embarcada — fundação que diferencia a perspectiva de engenharia em
+            sistemas complexos.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CONTACT ─── -->
+  <section id="contact" aria-labelledby="contact-title">
+    <div class="container">
+      <div class="contact-card fade-up">
+        <h2 class="contact-title" id="contact-title">Vamos construir algo.</h2>
+        <p class="contact-sub">
+          Disponível para projetos de dados, MLOps, sistemas de visão computacional
+          e consultoria em governança de IA.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:rafael.gfrancisco@outlook.com" class="btn btn-primary">
+            &#9993;&nbsp; Email
+          </a>
+          <a href="https://github.com/rafachico" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/rafaelgeraldini/" target="_blank" rel="noopener noreferrer"
+            class="btn btn-ghost">
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─── -->
+  <footer role="contentinfo">
+    <span>Rafael Geraldini Francisco &nbsp;·&nbsp; Limeira, SP &nbsp;·&nbsp; Brasil</span>
+    <span>UNICAMP Telecom &nbsp;·&nbsp; Engenharia de Dados &amp; IA</span>
+    <span>&copy; 2026</span>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/terminal.js"></script>
+  <script src="js/projects.js"></script>
+  <script src="js/scroll.js"></script>
+
+</body>
+
+</html>
