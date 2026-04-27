@@ -176,6 +176,7 @@
         <button class="filter-btn" data-filter="mlops">MLOps</button>
         <button class="filter-btn" data-filter="infra">Infra</button>
         <button class="filter-btn" data-filter="governanca">Governança</button>
+        <button class="filter-btn" data-filter="iot">IoT · Edge</button>
       </div>
 
       <div class="projects-grid">
@@ -220,6 +221,51 @@
           </div>
         </div>
 
+        <!-- Lloro — Fine-Tuning de Código -->
+        <div class="project-card fade-up" data-category="llm">
+          <button class="project-head" type="button" aria-expanded="false">
+            <div class="project-meta">
+              <span class="badge badge-llm">LLM</span>
+              <span class="card-toggle" aria-hidden="true">&#9660;</span>
+            </div>
+            <h3 class="project-name">Lloro — LLM Fine-Tuned para Código</h3>
+            <p class="project-sub">Fine-tuning de <strong>Code Llama 7B</strong> com QLoRA para geração e análise de
+              código Python e SQL — superando GPT-3.5 em benchmarks de avaliação independente.</p>
+          </button>
+          <div class="project-body" aria-hidden="true">
+            <div class="project-body-inner">
+              <div>
+                <p class="bd-label">Duas Variantes</p>
+                <p class="bd-text">
+                  <strong>Lloro Python</strong> — geração e análise de código Python: <strong>97,95% LLM-as-Judge</strong>
+                  (GPT-3.5: 94,29%) · CodeBERT-F1 <strong>0,9131</strong><br>
+                  <strong>Lloro SQL</strong> — text-to-SQL em dialect corporativo: <strong>71,33% LLM-as-Judge</strong>
+                  (GPT-3.5 Turbo: 67,52%) · CodeBERT-F1 <strong>0,9459</strong>
+                </p>
+              </div>
+              <div>
+                <p class="bd-label">Dataset Sintético</p>
+                <p class="bd-text"><strong>74.222 exemplos</strong> de treino gerados por pipeline automatizado:
+                  extração de contexto de código-base real → geração de pares instrução/resposta via LLM → filtragem de
+                  qualidade → dataset estruturado para fine-tuning supervisionado.</p>
+              </div>
+              <div>
+                <p class="bd-label">Treinamento</p>
+                <p class="bd-text">QLoRA 4-bit com LoRA rank-16 em <strong>NVIDIA A100 40 GB</strong>. Fev–Abr 2024.
+                  Avaliação tripla: LLM-as-Judge, CodeBERT-F1 e execução funcional de código.</p>
+              </div>
+              <div>
+                <p class="bd-label">Stack Técnica</p>
+                <div class="chip-row">
+                  <span class="chip">Code Llama 7B</span><span class="chip">QLoRA</span><span class="chip">PEFT</span>
+                  <span class="chip">HuggingFace</span><span class="chip">vLLM</span><span class="chip">CodeBERT</span>
+                  <span class="chip">A100 40GB</span><span class="chip">Python</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- AI Orchestration Suite -->
         <div class="project-card fade-up" data-category="llm governanca">
           <button class="project-head" type="button" aria-expanded="false">
@@ -228,80 +274,86 @@
               <span class="card-toggle" aria-hidden="true">&#9660;</span>
             </div>
             <h3 class="project-name">AI Orchestration Suite</h3>
-            <p class="project-sub">Plataforma modular de IA corporativa com orquestração de agentes, guardrails de
-              segurança e controle de fluxo de dados entre serviços.</p>
+            <p class="project-sub">Plataforma modular de IA corporativa — geração de workflows, guardrails de segurança,
+              observabilidade distribuída e MCP Server integrado.</p>
           </button>
           <div class="project-body" aria-hidden="true">
             <div class="project-body-inner">
               <div>
                 <p class="bd-label">Módulos</p>
                 <p class="bd-text">
-                  <strong>Orquestração</strong> — gerencia o ciclo de vida e comunicação entre agentes de IA ·
-                  <strong>Segurança</strong> — guardrails com detecção e mascaramento de PII em tempo real ·
-                  <strong>Fluxo de Dados</strong> — controle e rastreabilidade do pipeline entre serviços de IA.
+                  <strong>Gerador de Workflows</strong> — constrói fluxos LLM com catálogo de conectores, detecção de
+                  ambiguidade em prompts e continuidade de sessão entre agentes<br>
+                  <strong>Engine de Guardrails</strong> — NER via Transformers+spaCy, Regex, Moderação, detecção de
+                  Jailbreak e Prompt Injection, SDK de Blocking/Masking de PII em tempo real<br>
+                  <strong>Observabilidade</strong> — stack Loki + MongoDB + Fluentd, rastreamento distribuído de
+                  chamadas entre agentes e sistema de alertas<br>
+                  <strong>Web Search</strong> — roteador multi-provider: Tavily · Exa · DuckDuckGo · SerpAPI<br>
+                  <strong>MCP Server</strong> — protocolo de contexto para integração com agentes externos
                 </p>
               </div>
               <div>
                 <p class="bd-label">Diferencial</p>
-                <p class="bd-text">Auditoria completa de todas as decisões tomadas por agentes, com conformidade a
-                  regulamentações financeiras (PLD, Bacen, ANS) e trilhas de log imutáveis.</p>
+                <p class="bd-text">Auditoria completa de todas as decisões tomadas por agentes, detecção de PII em tempo
+                  real com mascaramento antes de qualquer chamada a LLM externo, conformidade a PLD e LGPD com trilhas
+                  de log imutáveis.</p>
               </div>
               <div>
                 <p class="bd-label">Stack Técnica</p>
                 <div class="chip-row">
-                  <span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">n8n</span>
-                  <span class="chip">LLM Guardrails</span><span class="chip">PII Detection</span><span
-                    class="chip">Audit Logs</span>
-                  <span class="chip">JavaScript</span>
+                  <span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">spaCy</span>
+                  <span class="chip">Transformers</span><span class="chip">Loki</span><span class="chip">MongoDB</span>
+                  <span class="chip">Fluentd</span><span class="chip">MCP</span><span class="chip">JavaScript</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- AI Governance Insurance -->
+        <!-- AI Governance -->
         <div class="project-card fade-up" data-category="governanca">
           <button class="project-head" type="button" aria-expanded="false">
             <div class="project-meta">
               <span class="badge badge-govern">Governança</span>
               <span class="card-toggle" aria-hidden="true">&#9660;</span>
             </div>
-            <h3 class="project-name">Governança de IA — Seguros</h3>
-            <p class="project-sub">Framework de políticas, gestão de acesso e auditoria para institucionalização segura
-              de IA em uma seguradora.</p>
+            <h3 class="project-name">Governança de IA — Instituição Financeira</h3>
+            <p class="project-sub">Framework de MLOps governance com políticas, gestão de acesso e auditoria para
+              adoção segura e regulatoriamente conformante de IA em serviços financeiros.</p>
           </button>
           <div class="project-body" aria-hidden="true">
             <div class="project-body-inner">
               <div>
                 <p class="bd-label">Contexto</p>
-                <p class="bd-text">Uma seguradora precisava adotar IA em processos críticos de
-                  <strong>underwriting</strong>, <strong>precificação</strong> e <strong>análise de sinistros</strong>
-                  de forma responsável, rastreável e em conformidade com LGPD e circulares da SUSEP.</p>
+                <p class="bd-text">Uma instituição financeira precisava formalizar o ciclo de vida de modelos de IA em
+                  produção — de aprovação até monitoramento contínuo — em conformidade com <strong>PLD</strong>,
+                  <strong>LGPD</strong> e diretrizes do <strong>BACEN</strong> sobre uso responsável de algoritmos em
+                  decisões de crédito e risco.
+                </p>
               </div>
               <div>
                 <p class="bd-label">Entregáveis</p>
                 <p class="bd-text">
-                  · Mapeamento de riscos e criação de <strong>Model Cards</strong> para todos os algoritmos em
+                  · Mapeamento de riscos e criação de <strong>Model Cards</strong> para todos os modelos em
                   produção<br>
                   · <strong>RBAC granular</strong> com políticas de acesso segmentadas por time e nível de risco<br>
-                  · Pipeline de monitoramento de <strong>concept drift</strong> com alertas automáticos<br>
-                  · Processo de validação de <strong>viés algorítmico</strong> pré-deploy<br>
-                  · Trilhas de auditoria para decisões automatizadas de alto impacto
+                  · Pipeline de monitoramento de <strong>concept drift</strong> e data drift com alertas automáticos<br>
+                  · Processo de validação de <strong>viés algorítmico</strong> pré-deploy com relatório de equidade<br>
+                  · Trilhas de auditoria imutáveis para decisões automatizadas de alto impacto
                 </p>
               </div>
               <div>
                 <p class="bd-label">Stack Técnica</p>
                 <div class="chip-row">
-                  <span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">MLFlow</span>
-                  <span class="chip">RBAC</span><span class="chip">Bias Detection</span><span class="chip">Model
-                    Cards</span>
-                  <span class="chip">LGPD</span><span class="chip">SUSEP</span><span class="chip">PostgreSQL</span>
+                  <span class="chip">Python</span><span class="chip">MLFlow</span><span class="chip">RBAC</span>
+                  <span class="chip">Bias Detection</span><span class="chip">Model Cards</span>
+                  <span class="chip">PLD</span><span class="chip">LGPD</span><span class="chip">PostgreSQL</span>
                 </div>
               </div>
               <div>
                 <p class="bd-label">Impacto</p>
                 <p class="bd-text">Redução de risco regulatório, visibilidade completa sobre o ciclo de vida dos modelos
-                  e processos formais de revisão humana para decisões de alto impacto ao segurado.</p>
+                  e processos formais de revisão humana para decisões automatizadas de alto impacto ao cliente.</p>
               </div>
             </div>
           </div>
@@ -368,7 +420,8 @@
                 <p class="bd-label">Abordagem</p>
                 <p class="bd-text">Extração de features com <strong>ResNet50</strong>, normalização por
                   <strong>histogram matching</strong> (scikit-image) e busca <strong>KNN</strong> no espaço de
-                  embeddings com StandardScaler. Múltiplas métricas: FSIM, SSIM, RMSE, UIQ.</p>
+                  embeddings com StandardScaler. Múltiplas métricas: FSIM, SSIM, RMSE, UIQ.
+                </p>
               </div>
               <div>
                 <p class="bd-label">API</p>
@@ -477,6 +530,118 @@
           </div>
         </div>
 
+        <!-- Water Heating Monitor -->
+        <div class="project-card fade-up" data-category="iot">
+          <button class="project-head" type="button" aria-expanded="false">
+            <div class="project-meta">
+              <span class="badge badge-iot">IoT · Edge</span>
+              <span class="card-toggle" aria-hidden="true">&#9660;</span>
+            </div>
+            <h3 class="project-name">Monitoramento de Aquecimento Central</h3>
+            <p class="project-sub">Sensor de temperatura em caldeira residencial com ESP8266 e ESPHome — detecção de
+              falhas via Home Assistant rodando em Raspberry Pi 3B.</p>
+          </button>
+          <div class="project-body" aria-hidden="true">
+            <div class="project-body-inner">
+              <div>
+                <p class="bd-label">Problema</p>
+                <p class="bd-text">Identificar falhas silenciosas na caldeira do sistema de aquecimento de água central
+                  antes que causem interrupção de serviço — sem depender de manutenção reativa.</p>
+              </div>
+              <div>
+                <p class="bd-label">Arquitetura</p>
+                <p class="bd-text">Sonda <strong>DS18B20</strong> → <strong>ESP8266</strong> com firmware
+                  <strong>ESPHome</strong> (MQTT over Wi-Fi) → <strong>Home Assistant</strong> (automações e alertas)
+                  hospedado em <strong>Raspberry Pi 3B</strong> local.</p>
+              </div>
+              <div>
+                <p class="bd-label">Funcionalidades</p>
+                <p class="bd-text">Dashboard de temperatura em tempo real · Alertas automáticos por anomalia de leitura
+                  · Histórico de séries temporais · Detecção de falha por threshold configurável.</p>
+              </div>
+              <div>
+                <p class="bd-label">Stack Técnica</p>
+                <div class="chip-row">
+                  <span class="chip">ESP8266</span><span class="chip">ESPHome</span>
+                  <span class="chip">Home Assistant</span><span class="chip">Raspberry Pi 3B</span>
+                  <span class="chip">MQTT</span><span class="chip">DS18B20</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ambilight DIY -->
+        <div class="project-card fade-up" data-category="iot">
+          <button class="project-head" type="button" aria-expanded="false">
+            <div class="project-meta">
+              <span class="badge badge-iot">IoT · Edge</span>
+              <span class="card-toggle" aria-hidden="true">&#9660;</span>
+            </div>
+            <h3 class="project-name">Ambilight DIY</h3>
+            <p class="project-sub">Clone do sistema Ambilight da Philips com Arduino e fita LED endereçável — captura
+              de cores da tela em tempo real projetadas nas paredes.</p>
+          </button>
+          <div class="project-body" aria-hidden="true">
+            <div class="project-body-inner">
+              <div>
+                <p class="bd-label">Como Funciona</p>
+                <p class="bd-text">Software de captura (host) amostra as bordas do frame em tempo real, computa a cor
+                  média por região e envia os valores RGB via serial USB ao <strong>Arduino</strong>, que controla cada
+                  LED da fita <strong>WS2812B</strong> individualmente via protocolo endereçável.</p>
+              </div>
+              <div>
+                <p class="bd-label">Resultado</p>
+                <p class="bd-text">Latência perceptível &lt; 50 ms · Suporte a múltiplos perfis de layout por posição
+                  da fita (superior, lateral, inferior) · Extensível para múltiplos segmentos independentes.</p>
+              </div>
+              <div>
+                <p class="bd-label">Stack Técnica</p>
+                <div class="chip-row">
+                  <span class="chip">Arduino</span><span class="chip">WS2812B</span><span class="chip">FastLED</span>
+                  <span class="chip">Serial USB</span><span class="chip">C++</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- VPS K8s Lab + n8n -->
+        <div class="project-card fade-up" data-category="infra">
+          <button class="project-head" type="button" aria-expanded="false">
+            <div class="project-meta">
+              <span class="badge badge-infra">Infra</span>
+              <span class="card-toggle" aria-hidden="true">&#9660;</span>
+            </div>
+            <h3 class="project-name">VPS Kubernetes Lab — Orquestração E-commerce</h3>
+            <p class="project-sub">Cluster K8s self-hosted em VPS para estudos de orquestração — com instância n8n
+              automatizando notificações de e-commerce.</p>
+          </button>
+          <div class="project-body" aria-hidden="true">
+            <div class="project-body-inner">
+              <div>
+                <p class="bd-label">Infraestrutura</p>
+                <p class="bd-text">VPS Linux com cluster <strong>Kubernetes</strong> single-node — ambiente deliberadamente
+                  não gerenciado para estudar os primitivos K8s (deployments, services, ingress, secrets) sem
+                  abstração de cloud provider.</p>
+              </div>
+              <div>
+                <p class="bd-label">Aplicação — Notificações E-commerce</p>
+                <p class="bd-text"><strong>n8n</strong> hospedado no cluster para orquestrar notificações de eventos do
+                  e-commerce: confirmação de pedido, atualização de rastreio e alertas de status — integrando webhooks
+                  do e-commerce com múltiplos canais de notificação.</p>
+              </div>
+              <div>
+                <p class="bd-label">Stack Técnica</p>
+                <div class="chip-row">
+                  <span class="chip">Kubernetes</span><span class="chip">n8n</span><span class="chip">VPS Linux</span>
+                  <span class="chip">Docker</span><span class="chip">Nginx Ingress</span><span class="chip">Webhooks</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -573,8 +738,7 @@
             <li>Desenvolvimento de <strong>Data Apps de ML</strong> em produção: detecção de fraude em imagens (ResNet50
               + KNN), reconhecimento facial em tempo real (MTCNN + Jetson) e análise de sentimentos — todos integrados
               via FastAPI.</li>
-            <li>Fine-tuning de <strong>LLM Llama com QLoRA/Unsloth</strong> para domínio de legislação municipal, com
-              interface de linguagem natural acessível ao público geral.</li>
+            <li>Fine-tuning de <strong>Code Llama 7B com QLoRA</strong> sobre dataset sintético de 74k exemplos — dois modelos especializados (Python e SQL) que superaram GPT-3.5 em benchmarks LLM-as-Judge; e fine-tuning de <strong>Llama com QLoRA/Unsloth</strong> para legislação municipal.</li>
             <li>Construção de <strong>pipeline CI/CD de 6 estágios</strong> no GitLab com SAST, testes unitários
               automatizados (Pytest) e deploy contínuo em GCP Cloud Run.</li>
             <li>Implementação do <strong>MLFlow Server corporativo</strong> com autenticação OAuth2 via Google Cloud,
@@ -628,11 +792,16 @@
 
         <div class="academic-card fade-up">
           <div class="ac-icon icon-amber">&#128187;</div>
-          <h3 class="ac-title">Eng. Telecomunicações</h3>
-          <p class="ac-institution">UNICAMP &nbsp;·&nbsp; Campinas, SP &nbsp;·&nbsp; 2018–2023</p>
-          <p class="ac-desc">Graduação cobrindo circuitos analógicos e digitais, processamento de sinais, sistemas RF,
-            protocolos de comunicação e programação embarcada — fundação que diferencia a perspectiva de engenharia em
-            sistemas complexos.</p>
+          <h3 class="ac-title">Eng. Telecomunicações &mdash; Currículo 88</h3>
+          <p class="ac-institution">UNICAMP &nbsp;·&nbsp; Campinas, SP &nbsp;·&nbsp; 2018–2023 &nbsp;·&nbsp; 248 créditos · 3720h</p>
+          <p class="ac-desc">
+            <strong>Matemática:</strong> Cálculo I–III · Álgebra Linear · Probabilidades &amp; Teoria da Informação<br>
+            <strong>Digital:</strong> Circuitos Digitais I–II · Microcontroladores I–II · vHDL · FPGA<br>
+            <strong>Sinais:</strong> Sinais &amp; Sistemas · PDS · Transmissão de Sinais<br>
+            <strong>RF:</strong> Comunicações Móveis · Propagação de Ondas · RF &amp; Micro-Ondas · Fotônica<br>
+            <strong>Prog:</strong> LP I · OO I · Prog Web · Dispositivos Móveis<br>
+            <strong>Eletivas:</strong> BD I · Automação &amp; Controle I
+          </p>
         </div>
 
       </div>
@@ -644,10 +813,6 @@
     <div class="container">
       <div class="contact-card fade-up">
         <h2 class="contact-title" id="contact-title">Vamos construir algo.</h2>
-        <p class="contact-sub">
-          Disponível para projetos de dados, MLOps, sistemas de visão computacional
-          e consultoria em governança de IA.
-        </p>
         <div class="contact-links">
           <a href="mailto:rafael.gfrancisco@outlook.com" class="btn btn-primary">
             &#9993;&nbsp; Email
