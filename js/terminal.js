@@ -1,24 +1,24 @@
 const TERMINAL_LINES = [
-  { type: 'cmd',  text: 'boot --profile rafael.geraldini' },
-  { type: 'out',  text: '  Initializing capability matrix...' },
-  { type: 'out',  text: '  [<span class="t-purple">TELECOM</span>]  UNICAMP &middot; vHDL &middot; RF &middot; VLC ......... <span class="t-ok">&#10003;</span>' },
-  { type: 'out',  text: '  [<span class="t-ok">DATA</span>]     Synapse &middot; Spark &middot; MLFlow &middot; SQL ..... <span class="t-ok">&#10003;</span>' },
-  { type: 'out',  text: '  [<span class="t-cyan">AI</span>]       QLoRA &middot; Vision &middot; SVM &middot; Agents .... <span class="t-ok">&#10003;</span>' },
-  { type: 'out',  text: '  [<span class="t-cyan">INFRA</span>]    K8s &middot; GCP &middot; AWS &middot; Docker ........ <span class="t-ok">&#10003;</span>' },
-  { type: 'out',  text: '  [<span class="t-amber">GOVERNANCE</span>] PLD &middot; LGPD &middot; SUSEP &middot; PII ...... <span class="t-ok">&#10003;</span>' },
-  { type: 'out',  text: '  [<span class="t-purple">EDGE</span>]    Jetson &middot; CUDA &middot; ESPHome &middot; IoT .... <span class="t-ok">&#10003;</span>' },
-  { type: 'out',  text: '' },
-  { type: 'cmd',  text: 'status --verbose' },
-  { type: 'out',  text: '  7 projetos em produ&ccedil;&atilde;o.' },
-  { type: 'out',  text: '  <span class="t-cyan">&rarr; All systems operational.</span>' },
+  { type: 'cmd', text: 'boot --profile rafael.geraldini' },
+  { type: 'out', text: '  Initializing capability matrix...' },
+  { type: 'out', text: '  [<span class="t-purple">TELECOM</span>]  UNICAMP &middot; vHDL &middot; RF &middot; VLC ......... <span class="t-ok">&#10003;</span>' },
+  { type: 'out', text: '  [<span class="t-ok">DATA</span>]     Synapse &middot; Spark &middot; MLFlow &middot; SQL ..... <span class="t-ok">&#10003;</span>' },
+  { type: 'out', text: '  [<span class="t-cyan">AI</span>]       QLoRA &middot; Vision &middot; SVM &middot; Agents .... <span class="t-ok">&#10003;</span>' },
+  { type: 'out', text: '  [<span class="t-cyan">INFRA</span>]    K8s &middot; GCP &middot; AWS &middot; Docker ........ <span class="t-ok">&#10003;</span>' },
+  { type: 'out', text: '  [<span class="t-amber">GOVERNANCE</span>] PLD &middot; LGPD &middot; SUSEP &middot; PII ...... <span class="t-ok">&#10003;</span>' },
+  { type: 'out', text: '  [<span class="t-purple">EDGE</span>]    Jetson &middot; CUDA &middot; ESPHome &middot; IoT .... <span class="t-ok">&#10003;</span>' },
+  { type: 'out', text: '' },
+  { type: 'cmd', text: 'status --verbose' },
+  { type: 'out', text: '  15 projetos em produ&ccedil;&atilde;o.' },
+  { type: 'out', text: '  <span class="t-cyan">&rarr; All systems operational.</span>' },
 ];
 
 const DELAYS = {
-  cmd:     [60, 160],
-  out:     [30, 90],
-  empty:   [120, 220],
-  initial: 700,
-  between: 180,
+  cmd: [40, 80],
+  out: [20, 50],
+  empty: [80, 150],
+  initial: 100,
+  between: 80,
 };
 
 function rand(min, max) {
